@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript and the DOM</title>
+</head>
+<body>
+    <h1> Todo Tracker </h1>
+    <form>
+        <input type='text' id="user-todo" placeholder='New Todo' required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+
+    </ul>
+
+    <button id="clear"> Clear All</button>
+
+    <script>
+    //Step 1 create variables
+
+    var form = document.querySelector('form');
+    var todoList = document.querySelector('ul');
+    var button = document.getElementById('clear');
+    var input = document.getElementById('user-todo');
+
+    //Step 2 Attach eventlisteners to form and submit
+
+    form.addEventListener('submit', submitFunc);
+
+    function submitFunc(event){
+        event.preventDefault();
+        console.log('Neue Todo: ' + input.value);
+        todoMaker(input.value);
+        input.value = '';
+    }
+    //Step 3 Create the function todoMaker to creater a 'li' element, set the content to the input and append it to the List
+
+    function todoMaker(text) {
+        var todoElement = document.createElement('li');
+        todoElement.textContent = text;
+        todoList.appendChild(todoElement);
+    };
+    //Step 4 
+
+    button.addEventListener('click', removeTodos);
+
+    function removeTodos(event) {
+        while( todoList.firstChild ) {
+            console.log(todoList.firstChild.textContent);
+            todoList.removeChild(todoList.firstChild);
+        };
+    }
+
+    </script>
+
+</body>
+</html>
