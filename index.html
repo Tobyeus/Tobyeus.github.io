@@ -3,109 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript and the DOM</title>
-    <style>
-        body{
-            padding:15px;
-            background-Color: #66CCFF;
-            font-family: sans-serif;
-        }
-        #title {
-            padding: 10px;
-            font-size: 36px;
-            border: 2px solid #fff;
-            width: 250px;
-        }
-        #todo-header {
-            font-size:24px;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-            width: 250px;
-            text-align: center;
-        }
-        li {
-            color: #333;
-            background-color: rgba(255,255,255, .5);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-        </style>
+    <title>Javascript Memory Game</title>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <h1> Todo Tracker </h1>
-    <form>
-        <input type='text' id="user-todo" placeholder='New Todo' required>
-    </form>
-
-    <h2 id="todo-header">Todos</h2>
-    <ul>
-
-    </ul>
-
-    <button id="clear"> Clear All</button>
-
-    <script>
-    //Step 1 create variables
-
-    var form = document.querySelector('form');
-    var todoList = document.querySelector('ul');
-    var button = document.getElementById('clear');
-    var input = document.getElementById('user-todo');
-
-    // Declare variable 'todosArray' to gold our todos.
-    // set out 'todosArray' to an empty array.
-
-    //var todosArray = []; // Every refresh, this will create a empty Array
+    <div id='game-board'> </div>
     
-    // Array für todos setzen, wenn bereits ein Item im Storage existiert wird das Item mit JSON.parse an
-    // das Array weitergegeben, falls nicht wird ein leeres Array angelegt.
-    var todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : []; 
-
-    // use localStorage setItem() method to set 'todos' to a string with 'JSON.stringify()'
-        // JSON.stringify() if used bcause localStorage workds with string, This is how
-        // we send data to localStorage
-    
-    localStorage.setItem('todos', JSON.stringify(todosArray)); 
-
-    // Declare a variable 'storage' that contains all the information in localStorage
-        // We will assign to 'stroage' JSON.parse() method that converts strings from local
-        // storage into data we can access with JavaScript.
-        // When receiving data from a web server, the data is always a string.
-        // Parse the data with JSON.parse(), and the data becomes a JavaScript object
-    
-    var storage = JSON.parse(localStorage.getItem('todos'));
-
-    // Event for submitting a Todo Element
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); // prevents reloading the page
-
-        todosArray.push(input.value); // input.value wird in todosArray hinzugefügt
-        localStorage.setItem('todos', JSON.stringify(todosArray));
-        todoMaker(input.value);
-        input.value = '';
-    });
-
-    var todoMaker = function(text) {
-        var todo = document.createElement('li');
-        todo.textContent = text;
-        todoList.appendChild(todo);
-    }
-
-    for(var i=0; i<storage.length;i++) {
-        todoMaker(storage[i]);
-    }
-
-    button.addEventListener('click', function(e) {
-        while( todoList.firstChild ){
-            todoList.removeChild(todoList.firstChild);
-        }
-        localStorage.clear();
-    });
-
-     </script>
-
+    <script src='main.js'></script>
 </body>
 </html>
