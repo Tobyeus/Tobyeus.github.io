@@ -1,58 +1,100 @@
-*,
-*::before,
-*::after{
-    box-sizing: border-box
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    margin: 20px 0;
-    background: #6589F9;
+    background-color: #0E1116;
 }
 
-.grid {
-    max-width: 960px;
-    margin: 0 auto;
+.header {
+    display: inline-block;
+    background-color: #0E1116;
+    width: 100%;
+    font-size: 25px;
+    padding: 20px 20px;
+    color: #ffffff;
+    position: fixed;
+}
+
+.name {
+    float: left;
+}
+
+.links {
+    float: right;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 14px;
+    display: inline;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.main {
+    min-height: 800px;
+    background: #555;
+    text-align: center;
+    background-image: url('image/main-image.jpg');
+    background-size: cover;
+}
+
+a:hover {
+    background-color: #87919E;
+}
+
+.main h2 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 100px;
+    padding-top: 300px;
+}
+.projects-container{
+    background-color: #0E1116;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 50px;
+    padding-bottom: 25px;
 }
 
-.card {
-    position: relative;
-    transition: all .4s linear;
-    transform-style: preserve-3d;
-    margin: 5px;
+#project-box {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #fff;
+    border-radius: 4px;
 }
 
-.card,
-.back,
-.front {
-  height: 200px;
-  width: 200px;
+.about-me {
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-right: 150px;
+    padding-left: 150px;
+    line-height: 1.5;
 }
 
-.back,
-.front {
-  position: absolute;
-  backface-visibility: hidden;
+.about-me h2 {
+    font-size: 24px;
 }
 
-.front {
-    z-index: 2;
-    background: #FAB942 url('../img/question.gif') no-repeat center center / contain;
-  }
-.back {
-    transform: rotateY(180deg);
-    background-color: #6589F9;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}  
-
-.selected {
-    transform: rotateY(180deg);
-  }
-
-.match .front {
-  background: #6589F9 !important;
+.about-me p {
+    font-size: 16px;
 }
