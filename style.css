@@ -48,7 +48,7 @@ li a {
     min-height: 800px;
     background: #555;
     text-align: center;
-    background-image: url('image/main-image.jpg');
+    background-image: url('./image/main-image.jpg');
     background-size: cover;
 }
 
