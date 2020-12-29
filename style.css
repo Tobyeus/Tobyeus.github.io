@@ -10,22 +10,21 @@ body {
     background-color: #0E1116;
 }
 
+.page-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+
 .header {
-    display: inline-block;
     background-color: #0E1116;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     font-size: 25px;
-    padding: 20px 20px;
+    padding: 15px 30px;
     color: #ffffff;
     position: fixed;
-}
-
-.name {
-    float: left;
-}
-
-.links {
-    float: right;
 }
 
 ul {
@@ -66,26 +65,24 @@ a:hover {
 }
 .projects-container{
     background-color: #0E1116;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    justify-content: center;
+    grid-gap: 50px;
     padding: 50px;
     padding-bottom: 25px;
 }
 
 #project-box {
-    width: 250px;
-    height: 250px;
     border: 2px solid #fff;
     border-radius: 4px;
+    height: 250px;
 }
 
 .about-me {
     color: #fff;
     border: 1px solid #fff;
-    margin: 60px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 60px 100px;
     padding-right: 150px;
     padding-left: 150px;
     line-height: 1.5;
