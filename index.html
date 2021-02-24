@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel='stylesheet' href='./style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
         <div class='page-wrapper'>
                 <!-- Navigation -->
-                <header class='header'>
-                    <div class='name'>Tobias Tubandt | Portfolio</div>
-                    <nav class='navigation'>
-                            <ul class='links'>
-                                <li><a href='#home'>Home</a></li>
-                                <li><a href='#about-me'>About me</a></li>
-                                <li><a href='#projects'>Projects</a></li>
-                            </ul>
-                    </nav>
-                </header>
+                <nav class='nav-header'>
+                        <div class='name'>
+                                Tobias Tubandt | Portfolio
+                        </div>
+                        <div class='nav-links'>
+                            <button class='nav-toggle'>
+                                <i class='fa fa-navicon'></i>
+                            </button>
+                            <div class='links'>
+                            <a href='#home'>Home</a>
+                            <a href='#about-me'>About me</a>
+                            <a href='#projects'>Projects</a>
+                            </div>
+                        </div>
+                </nav>
                 <!-- Main Screen -->
             <div class='main-container'>
                 <div class='main' id='home'>
@@ -35,23 +41,24 @@
                         <img class='about-me-image' src='./image/me.png'>
                     </div>
                     <!-- Projects -->
+                    <h1 class='projects-headline' id='project-headline'>Projects</h1>
                     <div class='projects-container' id='projects'>
                          <div id='project-box'>
-                            <h2 id='project-headline'>Join our Gym landing page</h2>
                             <a id='project-link' href='https://tobyeus.github.io/gym/'>
                                 <img id='project-img' class='gympage' src='./image/gympage.png'>
                            </a>
+                           <h2 id='project-headline'>Join our Gym landing page</h2>
                            <p id='project-text'>
                             In this project I built an advertisement page for a fitness studio.
                             The web page is purely built with HTML and CSS. The main feature of the project is the responsive design.
                             </p>
                         </div>
                         <div id='project-box'>
-                            <h2 id='project-headline'>Memory game</h2>
                             <a id='project-link' href='https://tobyeus.github.io/memorygame/'>
                                 <img id='project-img' class='memory' src='./image/memory.PNG'>
                             </a>
-                           <p id='project-text'>
+                            <h2 id='project-headline'>Memory game</h2>
+                            <p id='project-text'>
                             While learning Javascript I built a memory game with programming language icons. 
                             </p>
                         </div>
@@ -64,5 +71,6 @@
                 <span>&copy; Tobias Tubandt 2020</span>
             </footer>
         </div>
+        <script src="app.js"></script>
 </body>
 </html>
