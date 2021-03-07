@@ -16,7 +16,7 @@
     font-size: 20px;
     color: #fff;
     position: fixed;
-    padding: 2% 2% 2% 5%;
+    padding:3% 2% 2% 3%;
     border-bottom: 1px solid #fff;
     line-height: 1.2;
 }
@@ -34,6 +34,7 @@
 
 .nav-toggle{
     padding-right: 2%;
+    font-size: 20px;
 }
 
 .links{
@@ -42,8 +43,8 @@
     align-items: flex-end;
     height: 0px;
     overflow: hidden;
-    transition: 0.3s;
     width: auto;
+    transition: 0.5s;
 }
 
 .links-show{
@@ -51,14 +52,14 @@
     padding: 0px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    transition: 0.5s;
 }
 
-a {
+.navigation {
     text-decoration: none;
     color: #fff;
     border-radius: 4px;
     padding: 0.5rem;
-    transition: 0.3s;
 }
 
 .nav-toggle{
@@ -66,8 +67,8 @@ a {
     color: white;
     background: transparent;
     cursor: pointer;
-    transition: 0.3s;
     border-color: transparent;
+    transition: 0.5s;
 }
 .nav-toggle:hover{
     transform: rotate(90deg);
@@ -161,14 +162,31 @@ a:hover {
 footer {
     background-color: #000;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 2em;
+    height: 3em;
     color: #ffff;
     border-top: 1px solid #fff;
     font-size: 18px;
 }
+
+#contacts{
+    padding: 1rem;
+}
+
+.btn-contact{
+    font-size: 20px;
+    background-color: #000;
+    color: #ffff;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+/*.fa-linkedin-in {
+    padding: 0.4rem;
+} */
 
  
  
@@ -185,7 +203,7 @@ footer {
 
     .nav-header {
         border-bottom: 1px solid #fff;
-        line-height: 1.2;
+        line-height: 1.0;
         background-color: #0E1116;
         width: 100%;
         font-size: 25px;
@@ -229,16 +247,17 @@ footer {
         padding: 1.5rem;
     }
     
-    li a {
+    .navigation {
         text-decoration: none;
         color: #fff;
         border-radius: 4px;
-        padding: 0.2rem;
-        transition: 0.8s;
+        padding: 0.5rem;
+        margin: 0.5rem;
     }
 
-    a:hover {
+    .navigation:hover {
         background-color: #898888;
+        transition: 0.4s;
     }
 
     .main {
@@ -303,13 +322,30 @@ footer {
     footer {
         background-color: #000;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 3em;
         color: #ffff;
         border-top: 1px solid #fff;
-        font-size: 20px;
+        font-size: 25px;
+    }
+
+    #contacts{
+        padding: 1rem;
+    }
+
+    .btn-contact{
+        font-size: 25px;
+        background-color: #000;
+        color: #ffff;
+        padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+        border-radius: 4px;
+    }
+    
+    .btn-contact:hover {
+        background-color: #898888;
     }
 
     .projects-container{
