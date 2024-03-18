@@ -8,15 +8,9 @@ import Contact from './components/pages/Contact.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {
-            path: '/', component: Home,
-        },
-        {
-            path: '/projects', component: Projects,
-        },
-        {
-            path: '/about', component: Contact
-        }
+        { path: '/', component: Home },
+        { path: '/projects', component: Projects },
+        { path: '/about', component: Contact }
     ]
 });
 
