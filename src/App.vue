@@ -31,14 +31,10 @@ export default {
     overflow: auto;
 }
 .main-content {
-      color: #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 2px solid #fff;
-      width: 70%;
-      margin: 1rem;
-  } 
+    color: #000;
+    border: 2px solid #000;
+    margin: 1rem;
+} 
 
 @media (min-width: 650px) {
   #page-wrapper {
@@ -53,8 +49,9 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border: 2px solid #fff;
-      width: auto;
+      border: 2px solid #000;
+      width: 50%;
+      margin: 1.5rem auto;
   } 
 }
 </style>

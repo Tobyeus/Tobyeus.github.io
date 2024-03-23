@@ -21,9 +21,11 @@
             <router-link class="nav-link" to="/">
                 <base-button class='btn-nav'>Home</base-button>
             </router-link>
+            <!--
             <router-link class="nav-link" to="/about">
                 <base-button class='btn-nav'>Contact</base-button>
             </router-link>
+            -->
             <router-link class="nav-link" to="/projects">
                 <base-button class='btn-nav'>Projects</base-button>
             </router-link>
