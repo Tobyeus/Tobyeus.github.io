@@ -8,8 +8,9 @@
                     <base-button class="btn-project" :class="projects.geometryWars.open ? 'btn-active' : ''" @click="clickProject('geometryWars')">Geometry Wars</base-button>
                     <base-button class="btn-project" :class="projects.openglRust.open ? 'btn-active' : ''" @click="clickProject('openglRust')">OpenGL in Rust</base-button>
                 </div>
-                </base-card>
+            </base-card>
                 <base-card v-if="projects.kana.open" class="example">
+                    <h2>{{ projects.kana.name }}</h2>
                     <div class="image">
                         <img src="../../../public/images/kana-app.png" alt="">
                         <p class="project-links"> <a href="https://tobyeus.github.io/Kana-Learner-Vue/">Production</a> | <a href="https://github.com/Tobyeus/kana-app-vue">Github</a></p>
@@ -21,6 +22,7 @@
                     </p>
                 </base-card>
                 <base-card v-if="projects.openglRust.open" class="example">
+                <h2>{{ projects.openglRust.name }}</h2>
                     <div class="image">
                         <img src="../../../public/images/triangle.png" alt="">
                     </div>
@@ -32,6 +34,7 @@
                         </p>
                 </base-card>
                 <base-card v-if="projects.geometryWars.open" class="example">
+                    <h2>{{ projects.geometryWars.name }}</h2>
                     <div class="image">
                         <img src="../../../public/images/geometry_wars.png" alt="">
                         <p class="project-links"><a href="https://github.com/Tobyeus/GeometryWarsClone">Github</a></p>
@@ -52,15 +55,19 @@ export default {
         return {
             projects: {
                 kana: {
-                    open: false,
+                    name: "Kana Quiz",
+                    open: false
                 },
                 commander: {
-                    open: false,
+                    name: "Random Commander",
+                    open: false
                 },
                 openglRust: {
+                    name: "OpenGL in Rust",
                     open: false,
                 },
                 geometryWars: {
+                    name: "Geometry Wars",
                     open: false,
                 }
             }
@@ -93,6 +100,7 @@ export default {
     border-radius: 20px;
     border: 2px solid #000;
     transition: 0.4s;
+    margin: 2.0rem auto;
 }
 img{
     width: 100%;
@@ -104,7 +112,7 @@ img{
     line-height: 1.5;
     width: 90%;
     border: 2px solid #000;
-    margin: 2.0rem 0.75rem;
+    margin: 2.0rem auto;
     background-color:rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
