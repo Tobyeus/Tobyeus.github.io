@@ -25,7 +25,9 @@ npm run build
 npm run lint
 ```
 
-### Setup Github Pages and deploy committed changes
+### Setup Github Pages
+
+Use this command after changes are pushed to the repository and you want to deploy these to Github Pages:
 ```
 npm run deploy
 ```
