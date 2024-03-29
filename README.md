@@ -1,6 +1,6 @@
 # My Portfolio 
 
-This repository works as my portfolio. Development is done in Javascript and the VueJS framework. The webapp covers the home view with a short description and the project view with three of my personal projects.
+This repository works as my portfolio. Development is done in Javascript and the VueJS framework. The webapp covers the home view with a short description and the project view with three of my personal projects. The dist folder is purely holding the files to deploy the application. Every build of the project will create a new dist folder.
 
 ## Project setup
 
